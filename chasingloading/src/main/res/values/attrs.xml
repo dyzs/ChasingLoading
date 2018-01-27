@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ChasingLoading">
+        <attr name="clDfmWidth" format="dimension"/>
+        <attr name="clDfmSpacing" format="dimension"/>
+        <attr name="clDsRate" format="integer"/>
+        <attr name="clFsRate" format="integer"/>
+        <attr name="clMsRate" format="integer"/>
+        <attr name="clDsAngle" format="integer"/>
+        <attr name="clFsAngle" format="integer"/>
+        <attr name="clMsAngle" format="integer"/>
+        <attr name="clChasing" format="boolean"/>
+    </declare-styleable>
+</resources>
