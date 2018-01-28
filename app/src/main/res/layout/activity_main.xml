@@ -14,11 +14,15 @@
         <com.dyzs.akuma.chasingloading.ChasingLoading
             android:layout_width="match_parent"
             android:layout_height="150dp"
+            android:padding="0dp"
             app:clDfmWidth="5dp"
             app:clDfmSpacing="5dp"
             app:clDsRate="4"
             app:clFsRate="5"
             app:clMsRate="6"
+            app:clColor1="@color/holy_pink"
+            app:clColor2="@color/black"
+            app:clColor3="@color/oxygen_green"
             />
     </RelativeLayout>
 

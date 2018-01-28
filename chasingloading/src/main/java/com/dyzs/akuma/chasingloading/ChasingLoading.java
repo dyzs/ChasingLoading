@@ -45,8 +45,9 @@ public class ChasingLoading extends View{
     private ArrayList<RectF> mRectFs;
     private boolean mChasing;
     private ValueAnimator mAnimator;
-    private static final int[] COLORS = {Color.RED, Color.CYAN, Color.BLACK};
     private static final int[] SYS_ATTRS = {android.R.attr.padding};
+    private ArrayList<Integer> mColors;
+    private int mColor1, mColor2, mColor3;
     public ChasingLoading(Context context) {
         this(context, null);
     }
@@ -79,11 +80,18 @@ public class ChasingLoading extends View{
         mDarkStartAngle =  ta.getInteger(R.styleable.ChasingLoading_clDsAngle, 0);
         mFlameStartAngle =  ta.getInteger(R.styleable.ChasingLoading_clFsAngle, 135);
         mMasterStartAngle =  ta.getInteger(R.styleable.ChasingLoading_clMsAngle, 260);
+        mColor1 = ta.getColor(R.styleable.ChasingLoading_clColor1, Color.BLACK);
+        mColor2 = ta.getColor(R.styleable.ChasingLoading_clColor2, Color.CYAN);
+        mColor3 = ta.getColor(R.styleable.ChasingLoading_clColor3, Color.RED);
         mChasing = ta.getBoolean(R.styleable.ChasingLoading_clChasing, true);
         ta.recycle();
         if (mDfmWidth > mPadding) {
             mPadding = mDfmWidth;
         }
+        mColors = new ArrayList<>();
+        mColors.add(mColor1);
+        mColors.add(mColor2);
+        mColors.add(mColor3);
 
         mStartAngleValues = new ArrayList<>();
         mStartAngleValues.add(mDarkStartAngle);
@@ -99,7 +107,7 @@ public class ChasingLoading extends View{
             mDfmPaint.setStyle(Paint.Style.STROKE);
             mDfmPaint.setStrokeWidth(mDfmWidth);
             mDfmPaint.setStrokeCap(Paint.Cap.ROUND);
-            mDfmPaint.setColor(COLORS[i]);
+            mDfmPaint.setColor(mColors.get(i));
             mDfmPaints.add(mDfmPaint);
 
             /* add arc radian 计算圆弧的角度 */

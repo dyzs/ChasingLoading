@@ -10,5 +10,8 @@
         <attr name="clFsAngle" format="integer"/>
         <attr name="clMsAngle" format="integer"/>
         <attr name="clChasing" format="boolean"/>
+        <attr name="clColor1" format="color"/>
+        <attr name="clColor2" format="color"/>
+        <attr name="clColor3" format="color"/>
     </declare-styleable>
 </resources>
